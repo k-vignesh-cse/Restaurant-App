@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma Design Showcase</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+  <h2>UI &UX🎨 Figma Design</h2>
+  <h2>Restaurant App</h2>
+  <a href="https://www.figma.com/file/XXXX/Your-Design" target="_blank">
+    View in Figma
+  </a>
+
+  <iframe 
+    id="figmaFrame" 
+    src="https://embed.figma.com/design/AUIl3T5Uuqvnn2dQgbiFrq/Restaurent-App?node-id=0-1&embed-host=share"
+    allowfullscreen>
+  </iframe>
+
+  <button id="fullscreenBtn">🔳 Fullscreen</button>
+
+  <script>
+    // JavaScript to toggle fullscreen mode
+    const btn = document.getElementById("fullscreenBtn");
+    const iframe = document.getElementById("figmaFrame");
+
+    btn.addEventListener("click", () => {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) { 
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) { 
+        iframe.msRequestFullscreen();
+      }
+    });
+  </script>
+</body>
+</html>
